@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Vashnee Naidoo | HR and Labour Law | De Novo HR Durban</title>
+<meta name="description" content="De Novo HR is led by Vashnee Naidoo. More than 25 years in HR strategy and labour law, a CCMA commissioner, based in KwaZulu-Natal and working across South Africa." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink:#f3efe6; --muted:#9c978c; --gold:#c9a96a; --gold-soft:#e4d4a8;
+    --teal:#1c9d8f; --teal-deep:#0e6e66; --canvas:#08090a; --card:#111416; --line:#2a2e30;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--canvas); color:var(--ink); font-family:Outfit, "Segoe UI", sans-serif; line-height:1.5; overflow-x:hidden; }
+  a { color:inherit; text-decoration:none; }
+  img { max-width:100%; display:block; }
+  .wrap { width:min(74rem, calc(100% - 2.4rem)); margin:0 auto; }
+  .display { font-family:"Cormorant Garamond", Georgia, serif; font-weight:500; }
+  .kicker { margin:0; font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); }
+  .af,.zu { display:none; }
+  body:has(#lang-af:checked) .en { display:none; }
+  body:has(#lang-af:checked) .af { display:inline; }
+  body:has(#lang-zu:checked) .en { display:none; }
+  body:has(#lang-zu:checked) .zu { display:inline; }
+  #lang-en,#lang-af,#lang-zu { position:absolute; opacity:0; pointer-events:none; }
+  header.bar { position:sticky; top:0; z-index:20; background:rgba(8,9,10,.94); border-bottom:1px solid var(--line); }
+  .bar-inner { display:flex; align-items:center; gap:.8rem; min-height:4.6rem; }
+  .brand { display:inline-flex; align-items:center; gap:.7rem; animation:logo-in 1.15s cubic-bezier(.16,1,.3,1) both; }
+  @keyframes logo-in { from { transform:translateX(-100vw); } to { transform:none; } }
+  .mark { display:flex; flex-direction:column; padding:.15rem .4rem .25rem; border-radius:.55rem; box-shadow:inset 0 0 0 1px var(--gold); }
+  .mark b { font-family:"Cormorant Garamond", Georgia, serif; font-size:1.7rem; font-style:italic; line-height:.85; color:var(--gold); font-weight:500; }
+  .mark svg { width:2.4rem; height:.45rem; }
+  .word { display:flex; flex-direction:column; line-height:1; }
+  .word strong { font-family:"Cormorant Garamond", Georgia, serif; font-size:1.25rem; letter-spacing:.08em; color:var(--gold); font-weight:500; }
+  .word small { margin-top:.28rem; font-size:.62rem; font-weight:600; letter-spacing:.18em; color:var(--gold-soft); }
+  nav { display:flex; gap:1rem; margin-left:1.2rem; }
+  nav a { font-size:.86rem; color:var(--muted); white-space:nowrap; }
+  nav a.on { color:var(--ink); }
+  .tools { margin-left:auto; display:flex; gap:.4rem; }
+  .lang { display:inline-flex; align-items:center; height:2.5rem; padding:0 .85rem; border-radius:999px; color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold); font-size:.75rem; font-weight:600; cursor:pointer; }
+  .hero { position:relative; overflow:hidden; }
+  .hero-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:right center; filter:saturate(.85); }
+  .shade { position:absolute; inset:0; background:linear-gradient(90deg, rgba(8,9,10,.92) 0%, rgba(8,9,10,.75) 34%, rgba(8,9,10,.28) 62%, rgba(8,9,10,.18) 100%); }
+  .hero-inner { position:relative; z-index:1; display:grid; gap:2rem; align-items:end; padding:4.5rem 0 3.5rem; }
+  .place { margin:.7rem 0 0; font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(243,239,230,.75); }
+  h1 { margin:.45rem 0 0; font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.02; font-weight:500; }
+  h1 .teal { color:var(--teal); }
+  .rule { display:flex; align-items:center; margin:1.4rem 0 0; }
+  .rule::before { content:""; width:3.5rem; height:1px; background:var(--gold); }
+  .rule::after { content:""; width:.4rem; height:.4rem; border-radius:99px; background:var(--teal); }
+  .lead { margin:1.2rem 0 0; max-width:38rem; color:rgba(243,239,230,.84); font-size:1.05rem; }
+  .portrait { justify-self:start; }
+  .portrait img { width:11.5rem; height:14.5rem; object-fit:cover; object-position:center 15%; border-radius:1rem; box-shadow:0 0 0 1px var(--gold); }
+  .portrait figcaption { margin-top:.7rem; }
+  .portrait strong { display:block; font-size:1.55rem; font-style:italic; color:var(--gold); font-weight:500; }
+  .portrait span { font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  section { padding:4.2rem 0; border-top:1px solid var(--line); }
+  h2 { margin:.6rem 0 0; font-size:clamp(2rem,4.2vw,3.1rem); line-height:1.05; font-weight:500; }
+  .intro { margin:1rem 0 0; max-width:44rem; color:var(--muted); }
+  .cards { display:grid; gap:1rem; margin:1.8rem 0 0; padding:0; list-style:none; }
+  .card { padding:1.35rem; border-radius:.9rem; background:var(--card); box-shadow:inset 0 0 0 1px rgba(243,239,230,.06); }
+  .card h3 { margin:.35rem 0 0; font-size:1.45rem; }
+  .card p { margin:.65rem 0 0; color:var(--muted); }
+  .pills { display:flex; flex-wrap:wrap; gap:.45rem; margin:1.4rem 0 0; padding:0; list-style:none; }
+  .pills li { padding:.4rem .75rem; border-radius:999px; box-shadow:inset 0 0 0 1px var(--line); color:var(--muted); font-size:.78rem; }
+  .actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.5rem; }
+  .btn { display:inline-flex; align-items:center; min-height:3rem; padding:.75rem 1.3rem; border-radius:.5rem; font-weight:500; }
+  .btn-teal { background:var(--teal); animation:pulse-teal 1.7s ease-in-out infinite; }
+  .btn-line { animation:pulse-line 1.7s ease-in-out infinite; }
+  @keyframes pulse-teal {
+    0%, 100% { box-shadow:0 0 0 0 rgba(28,157,143,.7), 0 8px 22px rgba(28,157,143,.4); }
+    50% { box-shadow:0 0 0 12px rgba(28,157,143,0), 0 8px 32px rgba(201,169,106,.6); }
+  }
+  @keyframes pulse-line {
+    0%, 100% { box-shadow:inset 0 0 0 1px var(--gold), 0 0 0 0 rgba(201,169,106,.55); }
+    50% { box-shadow:inset 0 0 0 1px var(--gold), 0 0 0 11px rgba(201,169,106,0), 0 0 24px rgba(201,169,106,.5); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .brand, .btn-teal, .btn-line { animation:none; }
+    .btn-line { box-shadow:inset 0 0 0 1px var(--gold); }
+  }
+  .close { border-radius:.9rem; padding:2.4rem 1.4rem; background:linear-gradient(135deg, #0e6e66, #111416 55%); }
+  .close p { margin:1rem 0 0; max-width:38rem; color:rgba(243,239,230,.78); }
+  @media (min-width:860px) {
+    .hero-inner { grid-template-columns:minmax(0,36rem) auto 1fr; }
+    .portrait { justify-self:center; }
+    .portrait img { width:12.5rem; height:16rem; }
+    .cards.three { grid-template-columns:1fr 1fr 1fr; }
+    .cards.two { grid-template-columns:1.2fr .8fr; }
+  }
+  @media (max-width:800px) { nav { display:none; } }
+  .social { display:flex; gap:.35rem; }
+  .social a { width:2.15rem; height:2.15rem; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold); }
+  .social svg { width:1rem; height:1rem; fill:currentColor; }
+  .site-foot { border-top:1px solid var(--line); padding:2.2rem 0 2.6rem; }
+  .foot-row { display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; }
+  .foot-links { display:flex; flex-wrap:wrap; gap:.7rem 1.1rem; }
+  .foot-links a { color:var(--gold); font-size:.86rem; }
+  .fine { margin:1rem 0 0; max-width:48rem; color:var(--muted); font-size:.78rem; }
+</style>
+</head>
+<body>
+<input type="radio" name="lang" id="lang-en" checked />
+<input type="radio" name="lang" id="lang-af" />
+<input type="radio" name="lang" id="lang-zu" />
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="brand" href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-hr.html">
+      <span class="mark"><b>DN</b><svg viewBox="0 0 54 8" fill="none"><path d="M1 4.2c9 4.2 18-3.2 28 1 7 2.9 15-2.2 24-.5" stroke="#1c9d8f" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span class="word"><strong>DE NOVO</strong><small>HR</small></span>
+    </a>
+    <nav>
+      <a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-hr.html"><span class="en">Services</span><span class="af">Dienste</span><span class="zu">Izinsiza</span></a>
+      <a class="on" href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-about.html"><span class="en">About</span><span class="af">Oor ons</span><span class="zu">Ngathi</span></a>
+      <a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-contact.html"><span class="en">Contact</span><span class="af">Kontak</span><span class="zu">Xhumana</span></a>
+    </nav>
+    <div class="tools">
+      <div class="social">
+        <a href="https://www.instagram.com/magicvash.naidoo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.4 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg></a>
+        <a href="https://www.linkedin.com/company/denovo-human-resources" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.7 3.3A2.2 2.2 0 1 0 4.7 7.7 2.2 2.2 0 0 0 4.7 3.3zM3 9h3.4v12H3zm6.2 0h3.3v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.3V21H16.7v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9.2z"/></svg></a>
+        <a href="https://wa.me/27645007425" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 3.2A8.7 8.7 0 0 0 4.6 16.3L3.4 20.6l4.4-1.2A8.7 8.7 0 1 0 12 3.2zm5.1 12.2c-.2-.1-1.3-.6-1.5-.7s-.3-.1-.5.1-.6.7-.7.9-.3.2-.5.1a5.7 5.7 0 0 1-2.8-2.4c-.2-.3 0-.4.1-.6l.4-.4.1-.3a.4.4 0 0 0 0-.4c-.1-.1-.5-1.2-.7-1.6s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.5 2.5 0 0 0-.8 1.9 4.3 4.3 0 0 0 .9 2.3 9.7 9.7 0 0 0 3.8 3.3c.5.2 1 .4 1.4.5a3.4 3.4 0 0 0 1.5.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c-.1-.1-.2-.2-.4-.3z"/></svg></a>
+      </div>
+      <label class="lang" for="lang-af">Afrikaans</label>
+      <label class="lang" for="lang-zu">isiZulu</label>
+      <label class="lang" for="lang-en">English</label>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="border:0;padding:0">
+    <img class="hero-photo" src="https://raw.githubusercontent.com/jbadenhorst99-bot/denovo-hr-mockup/main/denovo-justice-hero.jpg" alt="" />
+    <div class="shade"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <p class="kicker"><span class="en">About De Novo HR</span><span class="af">Oor De Novo HR</span><span class="zu">Mayelana ne-De Novo HR</span></p>
+        <p class="place"><span class="en">KwaZulu-Natal · a national footprint</span><span class="af">KwaZulu-Natal · ’n nasionale voetspoor</span><span class="zu">KwaZulu-Natali · sisebenza ezweni lonke</span></p>
+        <h1 class="display"><span class="en">Led by<br /><span class="teal">Vashnee Naidoo.</span></span><span class="af">Gelei deur<br /><span class="teal">Vashnee Naidoo.</span></span><span class="zu">Iholwa ngu<br /><span class="teal">Vashnee Naidoo.</span></span></h1>
+        <span class="rule"></span>
+        <p class="lead"><span class="en">More than 25 years in human resource strategy and labour law. A CCMA commissioner for more than 10 years. The person clients call when the process has to be fair, and the business still has to keep moving.</span><span class="af">Meer as 25 jaar in menslikehulpbronstrategie en arbeidsreg. ’n KVBA-kommissaris vir meer as 10 jaar. Die persoon wat kliënte bel wanneer die proses billik moet wees, en die besigheid moet aanhou beweeg.</span><span class="zu">Iminaka engaphezu kwengu-25 yesu le-HR nomthetho wezabasebenzi. UKhomishana we-CCMA iminyaka engaphezu kweyi-10. Umuntu amaklayenti amshayelayo uma inqubo kufanele ilungile, ibhizinisi liqhubeke.</span></p>
+      </div>
+      <figure class="portrait">
+        <img src="https://raw.githubusercontent.com/jbadenhorst99-bot/denovo-hr-mockup/main/vashnee-naidoo.jpg" alt="Vashnee Naidoo, leader of De Novo HR" />
+        <figcaption>
+          <strong class="display">Vashnee Naidoo</strong>
+          <span><span class="en">Founder and leader</span><span class="af">Stigter en leier</span><span class="zu">Umsunguli nomholi</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker"><span class="en">Why the firm exists</span><span class="af">Hoekom die firma bestaan</span><span class="zu">Kungani inkampani ikhona</span></p>
+      <h2 class="display"><span class="en">HR and labour law, in the same practice.</span><span class="af">MH en arbeidsreg, in dieselfde praktyk.</span><span class="zu">I-HR nomthetho wezabasebenzi, emsebenzini ofanayo.</span></h2>
+      <p class="intro"><span class="en">De Novo Human Resources is both a human resources firm and a specialised labour law firm. That mix is the point. The firm can see what the business needs to deliver, and it does not trade those deliverables away just to look compliant. The work is to reduce risk and still get the best from employees.</span><span class="af">De Novo Human Resources is sowel ’n menslikehulpbronfirma as ’n gespesialiseerde arbeidsregfirma. Die mengsel is die punt. Die firma sien wat die besigheid moet lewer, en ruil daardie uitkomste nie net om voldoenend te lyk nie. Die werk is om risiko te verminder en steeds die beste uit werknemers te kry.</span><span class="zu">I-De Novo Human Resources iyinkampani ye-HR neyomthetho wezabasebenzi. Lokho kuyinhloso. Ibona okufanele ibhizinisi likulethe, ingakushi umphumela ukuze kubukeke sengathi kuyahambisana nomthetho. Umsebenzi ukunciphisa ubungozi kodwa kusatholakale okuhle kubasebenzi.</span></p>
+      <p class="intro"><span class="en">The practice has a footprint in every sector. It recently amalgamated with Naidoo Human Resources, a firm officially in existence since 2013, and operational for more than 20 years. De Novo HR is based in KwaZulu-Natal, with a national footprint and international clients. It is known for building HR departments, outsourced human resources, HR strategy, and labour law interventions.</span><span class="af">Die praktyk het ’n voetspoor in elke sektor. Dit het onlangs saamgesmelt met Naidoo Human Resources, ’n firma wat amptelik sedert 2013 bestaan en al meer as 20 jaar werksaam is. De Novo HR is in KwaZulu-Natal gesetel, met ’n nasionale voetspoor en internasionale kliënte.</span><span class="zu">Lo msebenzi ukhona kuzo zonke izimboni. Usanda kuhlangana ne-Naidoo Human Resources, inkampani esebenza ngokusemthethweni kusukela ngo-2013, kodwa isebenza iminyaka engaphezu kwengu-20. I-De Novo HR isizinze KwaZulu-Natali, isebenza ezweni lonke futhi inamaklayenti aphesheya.</span></p>
+      <ul class="pills">
+        <li><span class="en">Fibre</span><span class="af">Vesel</span><span class="zu">I-fibre</span></li>
+        <li><span class="en">Road freight and logistics</span><span class="af">Padvrag en logistiek</span><span class="zu">Izimpahla zomgwaqo nezokuthutha</span></li>
+        <li><span class="en">Chemical industry</span><span class="af">Chemiese bedryf</span><span class="zu">Imboni yamakhemikhali</span></li>
+        <li><span class="en">Manufacturing</span><span class="af">Vervaardiging</span><span class="zu">Ukukhiqiza</span></li>
+        <li><span class="en">Call centres</span><span class="af">Inbelsentra</span><span class="zu">Amakholi senta</span></li>
+        <li><span class="en">Retail</span><span class="af">Kleinhandel</span><span class="zu">Ukuthengisa</span></li>
+        <li><span class="en">Motor industry</span><span class="af">Motorbedryf</span><span class="zu">Imboni yezimoto</span></li>
+        <li><span class="en">Pharmacies and medical practices</span><span class="af">Apteke en mediese praktyke</span><span class="zu">Amakhemisi nemithi</span></li>
+        <li><span class="en">Body corporates</span><span class="af">Deeltitelskemas</span><span class="zu">Ama-body corporate</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker"><span class="en">Vashnee Naidoo</span><span class="af">Vashnee Naidoo</span><span class="zu">U-Vashnee Naidoo</span></p>
+      <h2 class="display"><span class="en">The training, and the years in the chair.</span><span class="af">Die opleiding, en die jare op die stoel.</span><span class="zu">Imfundo, neminyaka esihlalweni.</span></h2>
+      <ul class="cards three">
+        <li class="card">
+          <p class="kicker">01</p>
+          <h3 class="display"><span class="en">Qualifications</span><span class="af">Kwalifikasies</span><span class="zu">Iziqu</span></h3>
+          <p><span class="en">BA degree in Law and Psychology. Postgraduate Diploma in Human Resources. Master’s degree in Labour Law.</span><span class="af">BA-graad in Regte en Sielkunde. Nagraadse diploma in Menslike Hulpbronne. Meestersgraad in Arbeidsreg.</span><span class="zu">Iziqu ze-BA kuMthetho naseSayikholoji. I-Diploma ye-HR yangemva kweziqu. I-Master’s kuMthetho Wezabasebenzi.</span></p>
+        </li>
+        <li class="card">
+          <p class="kicker">02</p>
+          <h3 class="display"><span class="en">CCMA commissioner</span><span class="af">KVBA-kommissaris</span><span class="zu">UKhomishana we-CCMA</span></h3>
+          <p><span class="en">She qualified as a commissioner at the CCMA and has more than 10 years of experience practising as a commissioner.</span><span class="af">Sy het as kommissaris by die KVBA gekwalifiseer en het meer as 10 jaar ondervinding as praktiserende kommissaris.</span><span class="zu">Ufumene isiqu lokuba uKhomishana e-CCMA futhi unolwazi olungaphezu kweminyaka eyi-10 esebenza njengoKhomishana.</span></p>
+        </li>
+        <li class="card">
+          <p class="kicker">03</p>
+          <h3 class="display"><span class="en">How she works</span><span class="af">Hoe sy werk</span><span class="zu">Indlela asebenza ngayo</span></h3>
+          <p><span class="en">She specialises in alternative dispute resolution, and looks for the most practical and cost-effective way through a problem. She believes in continual improvement. That is what sets her apart from the average HR consultant. She succeeds where others have already failed.</span><span class="af">Sy spesialiseer in alternatiewe geskilbeslegting, en soek die mees praktiese en kostedoeltreffende pad deur ’n probleem. Sy glo in voortdurende verbetering. Dit onderskei haar van die gemiddelde MH-konsultant. Sy slaag waar ander reeds misluk het.</span><span class="zu">Ugxile ekuxazululeni izingxabano ngendlela engenakwe enkantolo, futhi ufuna indlela esebenzayo nephuza kancane. Ukholelwa ekuthuthukiseni njalo. Yilokho okumehlukanisa nomeluleki ojwayelekile we-HR. Uphumelela lapho abanye sebehlulekile.</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <ul class="cards two">
+        <li class="card">
+          <p class="kicker"><span class="en">Culture</span><span class="af">Kultuur</span><span class="zu">Isiko</span></p>
+          <h3 class="display"><span class="en">What you see is what you get.</span><span class="af">Wat jy sien, is wat jy kry.</span><span class="zu">Okubonayo yikho ozakuthola.</span></h3>
+          <p><span class="en">Authenticity first. The firm is transparent, effective and efficient. It partners with the client so the solution fits how the business actually operates.</span><span class="af">Egtheid eerste. Die firma is deursigtig, doeltreffend en effektief. Dit werk saam met die kliënt sodat die oplossing pas by hoe die besigheid werklik werk.</span><span class="zu">Ubuqotho kuqala. Inkampani icacile, isebenza kahle futhi iyashesha. Isebenzisana neklayenti ukuze isixazululo sifane nendlela ibhizinisi elisebenza ngayo ngempela.</span></p>
+        </li>
+        <li class="card">
+          <p class="kicker">25+</p>
+          <h3 class="display"><span class="en">Years in HR strategy and labour law.</span><span class="af">Jaar in MH-strategie en arbeidsreg.</span><span class="zu">Iminyaka yesu le-HR nomthetho wezabasebenzi.</span></h3>
+          <p><span class="en">Not a once-off opinion. A practice built over more than two decades, now under one name: De Novo HR.</span><span class="af">Nie ’n eenmalige mening nie. ’n Praktyk oor meer as twee dekades, nou onder een naam: De Novo HR.</span><span class="zu">Akuyona imibono yesikhashana. Umsebenzi owakhiwe iminyaka engaphezu kwengamashumi amabili, manje ngaphansi kwegama elilodwa: i-De Novo HR.</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="close">
+        <p class="kicker">De Novo HR</p>
+        <h2 class="display"><span class="en">Talk to Vashnee before the hearing date.</span><span class="af">Praat met Vashnee voor die verhoordatum.</span><span class="zu">Khuluma noVashnee ngaphambi kosuku lokulalelwa.</span></h2>
+        <p><span class="en">KwaZulu-Natal, working with employers across South Africa and with international clients.</span><span class="af">KwaZulu-Natal, en werk met werkgewers regoor Suid-Afrika en met internasionale kliënte.</span><span class="zu">KwaZulu-Natali, isebenza nabaqashi eNingizimu Afrika yonke nakumaklayenti aphesheya.</span></p>
+        <div class="actions">
+          <a class="btn btn-teal" href="tel:+27645007425"><span class="en">Call 064 500 7425</span><span class="af">Bel 064 500 7425</span><span class="zu">Shayela ku-064 500 7425</span></a>
+          <a class="btn btn-line" href="mailto:admin@denovohr.co.za">admin@denovohr.co.za</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot"><div class="wrap"><div class="foot-row"><p class="kicker">De Novo HR · Wattle Grove, Durban, 4091</p><nav class="foot-links"><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-privacy.html"><span class="en">Privacy Policy</span><span class="af">Privaatheid</span><span class="zu">Ubumfihlo</span></a><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-paia.html">PAIA</a><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-terms.html"><span class="en">Terms of use</span><span class="af">Gebruiksvoorwaardes</span><span class="zu">Imigomo</span></a><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/denovo-contact.html"><span class="en">Contact</span><span class="af">Kontak</span><span class="zu">Xhumana</span></a></nav></div><p class="fine"><span class="en">Responsible party under POPIA: De Novo Human Resources. 064 500 7425 · admin@denovohr.co.za. This site does not use tracking cookies.</span><span class="af">Verantwoordelike party onder POPIA: De Novo Human Resources. Geen opsporingskoekies nie.</span><span class="zu">Iqembu elibhekelele ngaphansi kwe-POPIA: i-De Novo Human Resources. Ayikho amakhukhi okulandelela.</span></p></div><p class="credit" style="margin:1.8rem 0 0;padding-top:1.1rem;border-top:1px solid #2a2e30;text-align:center;font-size:1.15rem;letter-spacing:.06em"><a href="https://jeswartdigital.online" style="color:#e4d4a8;text-decoration:none">by J E Swart Digital</a></p></footer>
+</body>
+</html>
