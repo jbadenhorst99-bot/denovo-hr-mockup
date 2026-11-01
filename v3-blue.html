@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blue · HR Consultant Durban | Labour Law & CCMA | De Novo HR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink:#e7eef8; --muted:#8ea3bf; --gold:#8eb7e8; --gold-soft:#d5e6f8;
+    --teal:#2f6fbe; --teal-deep:#163a6b; --canvas:#071018; --card:#101a2b; --line:#24344d;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--canvas); color:var(--ink); font-family:Outfit, "Segoe UI", sans-serif; line-height:1.5; overflow-x:clip; }
+  a { color:inherit; text-decoration:none; }
+  img { max-width:100%; display:block; }
+  .wrap { width:min(74rem, calc(100% - 2.4rem)); margin:0 auto; }
+  .display { font-family:"Cormorant Garamond", Georgia, serif; font-weight:500; }
+  .kicker { margin:0; font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); }
+  .af,.zu { display:none; }
+  body:has(#lang-af:checked) .en { display:none; }
+  body:has(#lang-af:checked) .af { display:inline; }
+  body:has(#lang-zu:checked) .en { display:none; }
+  body:has(#lang-zu:checked) .zu { display:inline; }
+  #lang-en,#lang-af,#lang-zu { position:absolute; opacity:0; pointer-events:none; }
+  header.bar {
+    position:sticky; top:0; z-index:20; background:rgba(7,16,28,.94);
+    border-bottom:1px solid var(--line);
+  }
+  .bar-inner { display:flex; align-items:center; gap:.8rem; min-height:4.6rem; }
+  .brand { display:inline-flex; align-items:center; gap:.7rem; animation:logo-in 1.15s cubic-bezier(.16,1,.3,1) both; }
+  @keyframes logo-in { from { transform:translateX(-110%); } to { transform:none; } }
+  .mark { display:flex; flex-direction:column; padding:.15rem .4rem .25rem; border-radius:.55rem; box-shadow:inset 0 0 0 1px var(--gold); }
+  .mark b { font-family:"Cormorant Garamond", Georgia, serif; font-size:1.7rem; font-style:italic; line-height:.85; color:var(--gold); font-weight:500; }
+  .mark svg { width:2.4rem; height:.45rem; }
+  .word { display:flex; flex-direction:column; line-height:1; }
+  .word strong { font-family:"Cormorant Garamond", Georgia, serif; font-size:1.25rem; letter-spacing:.08em; color:var(--gold); font-weight:500; }
+  .word small { margin-top:.28rem; font-size:.62rem; font-weight:600; letter-spacing:.18em; color:var(--gold-soft); }
+  nav { display:flex; gap:1rem; margin-left:1.2rem; }
+  nav a { font-size:.86rem; color:var(--muted); white-space:nowrap; }
+  .tools { margin-left:auto; display:flex; gap:.4rem; }
+  .lang {
+    display:inline-flex; align-items:center; height:2.5rem; padding:0 .85rem; border-radius:999px;
+    color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold); font-size:.75rem; font-weight:600; cursor:pointer;
+  }
+  body:has(#lang-af:checked) label[for="lang-en"],
+  body:has(#lang-zu:checked) label[for="lang-en"] { background:transparent; }
+  .hero { position:relative; min-height:92vh; overflow:hidden; }
+  .hero-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:68% center; }
+  .shade { position:absolute; inset:0; background:linear-gradient(90deg, rgba(7,16,28,.9) 0%, rgba(7,16,28,.62) 36%, rgba(7,16,28,.28) 68%, rgba(7,16,28,.42) 100%); }
+  .hero-inner { position:relative; z-index:1; min-height:92vh; display:flex; flex-direction:column; justify-content:flex-end; padding:4rem 0 4.5rem; }
+  .place { margin:.7rem 0 0; font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(231,238,248,.75); }
+  .presence { margin:1.3rem 0 0; font-size:clamp(1.5rem,3vw,2rem); font-style:italic; }
+  h1 { margin:.5rem 0 0; max-width:16ch; font-size:clamp(2.6rem,6vw,4.8rem); line-height:1.02; font-weight:500; }
+  h1 .teal { color:var(--teal); }
+  .rule { display:flex; align-items:center; margin:1.5rem 0 0; }
+  .rule::before { content:""; width:3.5rem; height:1px; background:var(--gold); }
+  .rule::after { content:""; width:.4rem; height:.4rem; border-radius:99px; background:var(--teal); }
+  .lead { margin:1.4rem 0 0; max-width:36rem; color:rgba(231,238,248,.84); font-size:1.05rem; }
+  .actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.7rem; }
+  .btn { display:inline-flex; align-items:center; min-height:3rem; padding:.75rem 1.3rem; border-radius:.5rem; font-weight:500; }
+  .btn-teal { background:var(--teal); animation:pulse-teal 1.7s ease-in-out infinite; }
+  .btn-line { animation:pulse-line 1.7s ease-in-out infinite; }
+  @keyframes pulse-teal {
+    0%, 100% { box-shadow:0 0 0 0 rgba(47,111,190,.7), 0 8px 22px rgba(47,111,190,.4); }
+    50% { box-shadow:0 0 0 12px rgba(47,111,190,0), 0 8px 32px rgba(142,183,232,.6); }
+  }
+  @keyframes pulse-line {
+    0%, 100% { box-shadow:inset 0 0 0 1px var(--gold), 0 0 0 0 rgba(142,183,232,.55); }
+    50% { box-shadow:inset 0 0 0 1px var(--gold), 0 0 0 11px rgba(142,183,232,0), 0 0 24px rgba(142,183,232,.5); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .brand, .btn-teal, .btn-line { animation:none; }
+    .btn-line { box-shadow:inset 0 0 0 1px var(--gold); }
+  }
+  .pills { display:flex; flex-wrap:wrap; gap:.45rem; margin:1.8rem 0 0; padding:0; list-style:none; }
+  .pills li { padding:.35rem .75rem; border-radius:999px; box-shadow:inset 0 0 0 1px var(--line); color:var(--muted); font-size:.75rem; background:rgba(7,16,28,.45); }
+  section { padding:4.4rem 0; border-top:1px solid var(--line); }
+  h2 { margin:.7rem 0 0; font-size:clamp(2.1rem,4.5vw,3.3rem); line-height:1.05; font-weight:500; }
+  .intro { margin:1rem 0 0; max-width:42rem; color:var(--muted); }
+  .cards { display:grid; gap:1rem; margin:2rem 0 0; padding:0; list-style:none; }
+  .card { padding:1.4rem; border-radius:.9rem; background:var(--card); box-shadow:inset 0 0 0 1px rgba(231,238,248,.06); height:100%; }
+  .card h3 { margin:.2rem 0 0; font-size:1.7rem; }
+  .card p { margin:.7rem 0 0; color:var(--gold-soft); font-size:1.25rem; font-style:italic; line-height:1.25; }
+  .card ul, .block ul { margin:.9rem 0 0; padding:0; list-style:none; color:var(--muted); }
+  .card li, .block li { padding:.28rem 0 .28rem .9rem; position:relative; }
+  .card li::before, .block li::before { content:""; position:absolute; left:0; top:.7rem; width:.35rem; height:.35rem; border-radius:99px; background:var(--teal); }
+  .blocks { display:grid; gap:1rem; margin-top:1rem; }
+  .block { padding:1.4rem; border-radius:.9rem; background:var(--card); }
+  .block h3 { margin:.4rem 0 0; font-size:1.15rem; }
+  .steps { display:grid; gap:1rem; margin:2rem 0 0; padding:0; list-style:none; }
+  .step { padding:1.3rem; border-radius:.9rem; background:var(--card); }
+  .num { margin:0; font-size:2rem; color:var(--gold); }
+  .step h3 { margin:.6rem 0 0; font-size:.95rem; }
+  .step p { margin:.5rem 0 0; color:var(--muted); font-size:.92rem; }
+  .close { border-radius:.9rem; padding:2.6rem 1.4rem; background:linear-gradient(135deg, #163a6b, #101a2b 55%); }
+  .close p { margin:1rem 0 0; max-width:36rem; color:rgba(231,238,248,.78); }
+  @media (min-width:800px) {
+    .cards, .blocks { grid-template-columns:1fr 1fr 1fr; }
+    .steps { grid-template-columns:repeat(4,1fr); }
+  }
+    .social { display:flex; gap:.35rem; }
+  .social a { width:2.15rem; height:2.15rem; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold); }
+  .social svg { width:1rem; height:1rem; fill:currentColor; }
+  .site-foot { border-top:1px solid var(--line); padding:2.2rem 0 2.6rem; }
+  .foot-row { display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; }
+  .foot-links { display:flex; flex-wrap:wrap; gap:.7rem 1.1rem; }
+  .foot-links a { color:var(--gold); font-size:.86rem; }
+  .fine { margin:1rem 0 0; max-width:48rem; color:var(--muted); font-size:.78rem; }
+
+  .mark { display:flex; flex-direction:row; align-items:center; padding:0; border-radius:0; box-shadow:none; background:transparent; }
+  .mark svg { width:2.75rem; height:2.75rem; }
+
+  @media (max-width:1100px) {
+    html, body { overflow-x: clip; }
+    .wrap, header .bar-inner { width:100% !important; max-width:100% !important; padding-left:1rem; padding-right:1rem; box-sizing:border-box; }
+    header .bar-inner { display:flex !important; flex-direction:column !important; align-items:stretch !important; flex-wrap:nowrap !important; gap:.75rem !important; min-height:0 !important; }
+    header .brand { align-self:flex-start; }
+    header nav, header nav.main { display:flex !important; flex-direction:row !important; flex-wrap:wrap !important; width:100% !important; margin:0 !important; gap:.65rem 1rem !important; }
+    header nav a, header nav.main a { font-size:1rem !important; color:var(--gold) !important; }
+    header .tools { display:flex !important; flex-wrap:wrap !important; width:100% !important; margin:0 !important; gap:.45rem !important; }
+    .lang { height:2.35rem; padding:0 .8rem; }
+    img, iframe { max-width:100%; }
+  }
+</style>
+</head>
+<body>
+<input type="radio" name="lang" id="lang-en" checked />
+<input type="radio" name="lang" id="lang-af" />
+<input type="radio" name="lang" id="lang-zu" />
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="brand" href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue.html">
+      <span class="mark"><svg class="seal" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="30" stroke="#8eb7e8" stroke-width="1.5"/><circle cx="32" cy="32" r="23.5" stroke="#3d7ec9" stroke-width="1"/><path d="M32 14v8M18 24h28" stroke="#d6e8ff" stroke-width="1.6" stroke-linecap="round"/><path d="M18 24l-6 13a6.2 6.2 0 0 0 12.2 0L18 24zm28 0l-6 13a6.2 6.2 0 0 0 12.2 0L46 24z" stroke="#d6e8ff" stroke-width="1.5" stroke-linejoin="round"/><path d="M32 33v15" stroke="#8eb7e8" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span class="word"><strong>DE NOVO</strong><small>HR</small></span>
+    </a>
+    <nav>
+      <a href="#services"><span class="en">Services</span><span class="af">Dienste</span><span class="zu">Izinsiza</span></a>
+      <a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue-about.html"><span class="en">About</span><span class="af">Oor ons</span><span class="zu">Ngathi</span></a>
+      <a href="#labour"><span class="en">Labour law</span><span class="af">Arbeidsreg</span><span class="zu">Umthetho</span></a>
+      <a href="#training"><span class="en">Training</span><span class="af">Opleiding</span><span class="zu">Ukuqeqesha</span></a>
+      <a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue-contact.html"><span class="en">Contact</span><span class="af">Kontak</span><span class="zu">Xhumana</span></a>
+    </nav>
+    <div class="tools">
+      <div class="social">
+        <a href="https://www.instagram.com/magicvash.naidoo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.4 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg></a>
+        <a href="https://www.linkedin.com/company/denovo-human-resources" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.7 3.3A2.2 2.2 0 1 0 4.7 7.7 2.2 2.2 0 0 0 4.7 3.3zM3 9h3.4v12H3zm6.2 0h3.3v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.3V21H16.7v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9.2z"/></svg></a>
+        <a href="https://wa.me/27645007425" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 3.2A8.7 8.7 0 0 0 4.6 16.3L3.4 20.6l4.4-1.2A8.7 8.7 0 1 0 12 3.2zm5.1 12.2c-.2-.1-1.3-.6-1.5-.7s-.3-.1-.5.1-.6.7-.7.9-.3.2-.5.1a5.7 5.7 0 0 1-2.8-2.4c-.2-.3 0-.4.1-.6l.4-.4.1-.3a.4.4 0 0 0 0-.4c-.1-.1-.5-1.2-.7-1.6s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.5 2.5 0 0 0-.8 1.9 4.3 4.3 0 0 0 .9 2.3 9.7 9.7 0 0 0 3.8 3.3c.5.2 1 .4 1.4.5a3.4 3.4 0 0 0 1.5.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c-.1-.1-.2-.2-.4-.3z"/></svg></a>
+      </div>
+      <label class="lang" for="lang-af">Afrikaans</label>
+      <label class="lang" for="lang-zu">isiZulu</label>
+      <label class="lang" for="lang-en">English</label>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="border:0;padding:0">
+    <img class="hero-photo" src="https://raw.githubusercontent.com/jbadenhorst99-bot/denovo-hr-mockup/main/denovo-justice-hero.jpg" alt="Lady Justice, blindfolded, with sword and scales" />
+    <div class="shade"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <p class="kicker"><span class="en">HR · Labour law · Training</span><span class="af">MH · Arbeidsreg · Opleiding</span><span class="zu">HR · Umthetho wezabasebenzi · Ukuqeqesha</span></p>
+        <p class="place"><span class="en">Durban · working across South Africa</span><span class="af">Durban · werksaam regoor Suid-Afrika</span><span class="zu">eThekwini · sisebenza eNingizimu Afrika yonke</span></p>
+        <p class="display presence"><span class="en">Fair process. A protected business.</span><span class="af">Billike proses. ’n Beskermde besigheid.</span><span class="zu">Inqubo elungile. Ibhizinisi elivikelekile.</span></p>
+        <h1 class="display"><span class="en">Human resources and<br /><span class="teal">labour law</span> that hold.</span><span class="af">Menslike hulpbronne en<br /><span class="teal">arbeidsreg</span> wat hou.</span><span class="zu">Izinsiza zabantu kanye<br /><span class="teal">nomthetho wezabasebenzi</span> oqinile.</span></h1>
+        <span class="rule"></span>
+        <p class="lead"><span class="en">De Novo HR sets up the HR function, keeps you compliant with the Department of Labour and bargaining councils, and handles discipline, CCMA matters and manager training. Based in Durban. Working nationally, from small family businesses to larger employers.</span><span class="af">De Novo HR rig die MH-funksie op, hou jou voldoenend aan die Departement van Arbeid en bedingingsrade, en hanteer dissipline, KVBA-sake en bestuurdersopleiding. Gesetel in Durban. Werk landwyd.</span><span class="zu">I-De Novo HR yakha umnyango we-HR, igcine ukuhambisana noMnyango Wezabasebenzi kanye nemikhandlu yokuxoxisana, futhi iphathe isiyalo, izindaba ze-CCMA kanye nokuqeqeshwa kwabaphathi. Isizinze eThekwini. Isebenza ezweni lonke.</span></p>
+        <div class="actions">
+          <a class="btn btn-teal" href="#contact"><span class="en">Book a consultation</span><span class="af">Bespreek ’n konsultasie</span><span class="zu">Bhukha ukubonisana</span></a>
+          <a class="btn btn-line" href="tel:+27645007425">064 500 7425</a>
+        </div>
+        <ul class="pills">
+          <li><span class="en">Outsourced HR</span><span class="af">Uitgekontrakteerde MH</span><span class="zu">I-HR engaphandle</span></li>
+          <li><span class="en">CCMA representation</span><span class="af">KVBA-verteenwoordiging</span><span class="zu">Ukumelwa e-CCMA</span></li>
+          <li><span class="en">Disciplinary enquiries</span><span class="af">Dissiplinêre ondersoeke</span><span class="zu">Imibuzo yokuqondiswa</span></li>
+          <li><span class="en">Durban and KwaZulu-Natal</span><span class="af">Durban en KwaZulu-Natal</span><span class="zu">eThekwini naseKwaZulu-Natali</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="kicker"><span class="en">How we can help</span><span class="af">Hoe ons kan help</span><span class="zu">Indlela esingasiza ngayo</span></p>
+      <h2 class="display"><span class="en">Service offerings</span><span class="af">Diensaanbiedinge</span><span class="zu">Izinsizakalo</span></h2>
+      <p class="intro"><span class="en">Three parts of the same practice: build the HR department, handle the labour-law matters, and train the managers who have to run the process.</span><span class="af">Drie dele van dieselfde praktyk: bou die MH-afdeling, hanteer die arbeidsregsake, en lei die bestuurders op wat die proses moet bestuur.</span><span class="zu">Izingxenye ezintathu zomsebenzi ofanayo: yakha umnyango we-HR, ubhekane nezindaba zomthetho wezabasebenzi, futhi uqeqeshe abaphathi.</span></p>
+      <ul class="cards">
+        <li class="card" id="hr">
+          <p class="kicker">I</p>
+          <h3 class="display"><span class="en">Human Resources</span><span class="af">Menslike Hulpbronne</span><span class="zu">Izinsiza zabantu</span></h3>
+          <p class="display"><span class="en">An HR function, even if you do not employ one full time.</span><span class="af">’n MH-funksie, selfs al stel jy nie iemand voltyds aan nie.</span><span class="zu">Umsebenzi we-HR, noma ungamqashi owodwa ngokugcwele.</span></p>
+          <ul>
+            <li><span class="en">Create the HR department: systems, policies and strategy</span><span class="af">Skep die MH-afdeling: stelsels, beleide en strategie</span><span class="zu">Dala umnyango we-HR: izinhlelo, izinqubomgomo nesu</span></li>
+            <li><span class="en">Manage HR as an outsourced service</span><span class="af">Bestuur MH as ’n uitgekontrakteerde diens</span><span class="zu">Phatha i-HR njengesevisi engaphandle</span></li>
+            <li><span class="en">HR audits and Department of Labour compliance</span><span class="af">MH-oudits en voldoening aan die Departement van Arbeid</span><span class="zu">Ukuhlolwa kwe-HR nokuhambisana noMnyango Wezabasebenzi</span></li>
+            <li><span class="en">Bargaining council requirements</span><span class="af">Vereistes van die bedingingsraad</span><span class="zu">Izimfuno zomkhandlu wokuxoxisana</span></li>
+            <li><span class="en">Policies and procedures written for how you operate</span><span class="af">Beleide en prosedures vir hoe julle werk</span><span class="zu">Izinqubomgomo nezinqubo ezibhalwe ngendlela enisebenza ngayo</span></li>
+            <li><span class="en">Employee discipline and performance</span><span class="af">Werknemerdisipline en prestasie</span><span class="zu">Isiyalo sabasebenzi nokusebenza</span></li>
+          </ul>
+        </li>
+        <li class="card" id="labour">
+          <p class="kicker">II</p>
+          <h3 class="display"><span class="en">Labour Law</span><span class="af">Arbeidsreg</span><span class="zu">Umthetho wezabasebenzi</span></h3>
+          <p class="display"><span class="en">The hearing, the retrenchment, the CCMA. Done properly.</span><span class="af">Die verhoor, die aflegging, die KVBA. Behoorlik gedoen.</span><span class="zu">Ukuzwa, ukudilizwa, i-CCMA. Kwenziwe kahle.</span></p>
+          <ul>
+            <li><span class="en">Investigations and disciplinary enquiries</span><span class="af">Ondersoeke en dissiplinêre verhore</span><span class="zu">Uphenyo nemibuzo yokuqondiswa</span></li>
+            <li><span class="en">Performance management and grievance hearings</span><span class="af">Prestasiebestuur en grieweverhore</span><span class="zu">Ukuphathwa kokusebenza nokulalelwa kwezikhalo</span></li>
+            <li><span class="en">Appeals</span><span class="af">Appèlle</span><span class="zu">Izikhalazo</span></li>
+            <li><span class="en">Retrenchments</span><span class="af">Aflêings</span><span class="zu">Ukudilizwa</span></li>
+            <li><span class="en">Union negotiations and industrial action</span><span class="af">Vakbondonderhandeling en nywerheidsoptrede</span><span class="zu">Izingxoxo nezinyunyana kanye nesenzo sezimboni</span></li>
+            <li><span class="en">Representation at the CCMA and bargaining councils</span><span class="af">Verteenwoordiging by die KVBA en bedingingsrade</span><span class="zu">Ukumelwa e-CCMA nasemikhandlwini yokuxoxisana</span></li>
+          </ul>
+        </li>
+        <li class="card" id="training">
+          <p class="kicker">III</p>
+          <h3 class="display"><span class="en">Training for managers</span><span class="af">Opleiding vir bestuurders</span><span class="zu">Ukuqeqeshwa kwabaphathi</span></h3>
+          <p class="display"><span class="en">So the next hearing is not the first time a manager sees the process.</span><span class="af">Sodat die volgende verhoor nie die eerste keer is dat ’n bestuurder die proses sien nie.</span><span class="zu">Ukuze ukulalelwa okulandelayo kungabi okokuqala umphathi ebona inqubo.</span></p>
+          <ul>
+            <li><span class="en">How to conduct an investigation</span><span class="af">Hoe om ’n ondersoek te doen</span><span class="zu">Indlela yokwenza uphenyo</span></li>
+            <li><span class="en">How to manage performance</span><span class="af">Hoe om prestasie te bestuur</span><span class="zu">Indlela yokuphatha ukusebenza</span></li>
+            <li><span class="en">How to initiate a disciplinary enquiry</span><span class="af">Hoe om ’n dissiplinêre ondersoek te begin</span><span class="zu">Indlela yokuqala umbuzo wokuqondiswa</span></li>
+            <li><span class="en">How to chair a disciplinary hearing</span><span class="af">Hoe om ’n dissiplinêre verhoor te voorsit</span><span class="zu">Indlela yokuhola ukulalelwa kokuqondiswa</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker"><span class="en">How the work runs</span><span class="af">Hoe die werk verloop</span><span class="zu">Indlela umsebenzi oqhuba ngayo</span></p>
+      <h2 class="display"><span class="en">Listen. Set the rules.<br />Handle the matter. Stay.</span><span class="af">Luister. Stel die reëls.<br />Hanteer die saak. Bly.</span><span class="zu">Lalela. Setha imithetho.<br />Bhekana nodaba. Hlala.</span></h2>
+      <ol class="steps">
+        <li class="step"><p class="display num">I</p><h3><span class="en">Listen</span><span class="af">Luister</span><span class="zu">Lalela</span></h3><p><span class="en">What the business actually does, and where the risk is sitting.</span><span class="af">Wat die besigheid werklik doen, en waar die risiko sit.</span><span class="zu">Okubhizinisi elikwenzayo ngempela, nalapho ubungozi bukhona.</span></p></li>
+        <li class="step"><p class="display num">II</p><h3><span class="en">Set the rules</span><span class="af">Stel die reëls</span><span class="zu">Setha imithetho</span></h3><p><span class="en">Policies, procedures and an HR audit against the law and the bargaining council.</span><span class="af">Beleide, prosedures en ’n MH-oudit teen die wet en die bedingingsraad.</span><span class="zu">Izinqubomgomo, izinqubo kanye nokuhlolwa kwe-HR ngokomthetho.</span></p></li>
+        <li class="step"><p class="display num">III</p><h3><span class="en">Handle the matter</span><span class="af">Hanteer die saak</span><span class="zu">Bhekana nodaba</span></h3><p><span class="en">Investigation, enquiry, retrenchment or CCMA, chaired and recorded properly.</span><span class="af">Ondersoek, verhoor, aflegging of KVBA, behoorlik gelei en aangeteken.</span><span class="zu">Uphenyo, ukulalelwa, ukudilizwa noma i-CCMA, okuholwe kahle.</span></p></li>
+        <li class="step"><p class="display num">IV</p><h3><span class="en">Stay</span><span class="af">Bly</span><span class="zu">Hlala</span></h3><p><span class="en">Outsourced HR and manager training so the same problem does not return next month.</span><span class="af">Uitgekontrakteerde MH en opleiding sodat dieselfde probleem nie volgende maand terugkom nie.</span><span class="zu">I-HR engaphandle nokuqeqesha ukuze inkinga ingabuyi ngenyanga ezayo.</span></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="close">
+        <p class="kicker">De Novo HR</p>
+        <h2 class="display"><span class="en">Talk to us before the hearing date.</span><span class="af">Praat met ons voor die verhoordatum.</span><span class="zu">Khuluma nathi ngaphambi kosuku lokulalelwa.</span></h2>
+        <p><span class="en">Durban, KwaZulu-Natal. Working with employers across South Africa. Small family businesses and larger companies.</span><span class="af">Durban, KwaZulu-Natal. Werk met werkgewers regoor Suid-Afrika.</span><span class="zu">eThekwini, KwaZulu-Natali. Sisebenza nabaqashi eNingizimu Afrika yonke.</span></p>
+        <div class="actions">
+          <a class="btn btn-teal" href="tel:+27645007425"><span class="en">Call 064 500 7425</span><span class="af">Bel 064 500 7425</span><span class="zu">Shayela ku-064 500 7425</span></a>
+          <a class="btn btn-line" href="mailto:admin@denovohr.co.za">admin@denovohr.co.za</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot"><div class="wrap"><div class="foot-row"><p class="kicker">De Novo HR · Wattle Grove, Durban, 4091</p><nav class="foot-links"><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue-privacy.html"><span class="en">Privacy Policy</span><span class="af">Privaatheid</span><span class="zu">Ubumfihlo</span></a><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue-paia.html">PAIA</a><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue-terms.html"><span class="en">Terms of use</span><span class="af">Gebruiksvoorwaardes</span><span class="zu">Imigomo</span></a><a href="https://htmlpreview.github.io/?https://github.com/jbadenhorst99-bot/denovo-hr-mockup/blob/main/v3-blue-contact.html"><span class="en">Contact</span><span class="af">Kontak</span><span class="zu">Xhumana</span></a></nav></div><p class="fine"><span class="en">Responsible party under POPIA: De Novo Human Resources. 064 500 7425 · admin@denovohr.co.za. This site does not use tracking cookies.</span><span class="af">Verantwoordelike party onder POPIA: De Novo Human Resources. Geen opsporingskoekies nie.</span><span class="zu">Iqembu elibhekelele ngaphansi kwe-POPIA: i-De Novo Human Resources. Ayikho amakhukhi okulandelela.</span></p></div><p class="credit" style="margin:1.8rem 0 0;padding-top:1.1rem;border-top:1px solid #24344d;text-align:center;font-size:1.15rem;letter-spacing:.06em"><a href="https://jeswartdigital.online" style="color:#d5e6f8;text-decoration:none">by J E Swart Digital</a></p></footer>
+</body>
+</html>
