@@ -36,6 +36,20 @@
 
   .mark { display:flex; flex-direction:row; align-items:center; padding:0; border-radius:0; box-shadow:none; background:transparent; }
   .mark svg { width:2.75rem; height:2.75rem; }
+
+  @media (max-width:860px) {
+    .wrap { width:min(74rem, calc(100% - 1.5rem)); }
+    header .bar-inner { flex-wrap:wrap; align-items:center; row-gap:.55rem; min-height:0; padding:.7rem 0 .85rem; width:min(74rem, calc(100% - 1.5rem)); }
+    header .tools { display:contents; }
+    header .social { order:2; margin-left:auto; }
+    header .lang { order:4; height:2.05rem; padding:0 .62rem; font-size:.7rem; }
+    header nav, header nav.main {
+      order:3; display:flex !important; flex:1 1 100%; width:100%;
+      margin:0 !important; flex-wrap:wrap; gap:.45rem .9rem;
+    }
+    header nav a { font-size:.92rem; color:var(--gold); }
+    nav.foot-links { display:flex !important; }
+  }
 </style>
 </head>
 <body>
